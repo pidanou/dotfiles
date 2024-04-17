@@ -2,7 +2,9 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     servers = {
-      denols = {},
+      denols = {
+        filetypes = { "typescript" },
+      },
       svelte = {},
       pylsp = {},
     },
