@@ -12,6 +12,17 @@ return {
     },
   },
   {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    priority = 1000,
+    opts = {
+      background = {
+        dark = "dragon",
+        light = "lotus",
+      },
+    },
+  },
+  {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin",
