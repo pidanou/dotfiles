@@ -11,21 +11,11 @@ return {
       },
     },
   },
-  {
-    "rebelot/kanagawa.nvim",
-    name = "kanagawa",
-    priority = 1000,
-    opts = {
-      background = {
-        dark = "dragon",
-        light = "lotus",
-      },
-    },
-  },
+  { "rose-pine/neovim", name = "rose-pine" },
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "rose-pine",
     },
   },
 }
