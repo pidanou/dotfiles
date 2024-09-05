@@ -28,7 +28,7 @@ $time\
 [ ](fg:surface0)\
 $line_break$character"""
 
-palette = 'rose_pine'
+palette = 'catppuccin_mocha'
 
 [palettes.catppuccin_mocha]
 rosewater = "#f5e0dc"
