@@ -1,20 +1,64 @@
 format = """
 [░▒▓](#a3aed2)\
-[  ](bg:#a3aed2 fg:#090c0c)\
-[](bg:#769ff0 fg:#a3aed2)\
+$os\
+$username\
+[](fg:#a3aed2 bg:#1a1b26)\
+[](fg:#1a1b26 bg:#f7768e)\
+$hostname\
+[](bg:#1a1b26 fg:#f7768e)\
+[](fg:#1a1b26 bg:#769ff0)\
 $directory\
-[](fg:#769ff0 bg:#394260)\
+[](fg:#769ff0 bg:#1a1b26)\
+[](bg:#394260 fg:#1a1b26)\
 $git_branch\
 $git_status\
-[](fg:#394260 bg:#212736)\
+[](bg:#1a1b26 fg:#394260)\
+[](fg:#1a1b26 bg:#50d7bf)\
 $nodejs\
 $rust\
 $golang\
 $php\
-[](fg:#212736 bg:#1d2230)\
+[](fg:#50d7bf bg:#1a1b26)\
+[](bg:#545c7e fg:#1a1b26)\
 $time\
-[ ](fg:#1d2230)\
+[ ](fg:#545c7e)\
 \n$character"""
+
+[os]
+disabled = false
+style = "bg:#a3aed2 fg:#090c0c"
+
+[os.symbols]
+Windows = "󰍲"
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+
+[hostname]
+format = '[ $ssh_symbol$hostname ](bg:#f7768e fg:#090c0c)'
+ssh_symbol = '🌏 '
+
+
+[username]
+show_always = true
+style_user = "bg:#a3aed2 fg:#090c0c"
+style_root = "bg:#a3aed2 fg:#090c0c"
+format = '[ $user ]($style)'
 
 [directory]
 style = "fg:#16161e bg:#769ff0"
@@ -37,26 +81,26 @@ format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 
 [nodejs]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#50d7bf"
+format = '[[ $symbol ($version) ](fg:#090c0c bg:#50d7bf)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#50d7bf"
+format = '[[ $symbol ($version) ](fg:#090c0c bg:#50d7bf)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#50d7bf"
+format = '[[ $symbol ($version) ](fg:#090c0c bg:#50d7bf)]($style)'
 
 [php]
 symbol = ""
-style = "bg:#212736"
-format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+style = "bg:#50d7bf"
+format = '[[ $symbol ($version) ](fg:#090c0c bg:#50d7bf)]($style)'
 
 [time]
 disabled = false
 time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[  $time ](fg:#a0a9cb bg:#1d2230)]($style)'
+style = "bg:#545c7e"
+format = '[[  $time ](fg:#a0a9cb bg:#545c7e)]($style)'
